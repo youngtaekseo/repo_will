@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax로 json 데이터 사용하기(바인딩)</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $("button").click(function() {
+                $.ajax({
+                    url      : "MOCK_DATA.json", // 서버측의 파일 또는 매핑주소
+                    dataType : "json",           // 서버로부터 받아오는(응답) 데이터포맷이 json
+                    success  : function(data) {  // success  : function(서버측에서 보내온 테이더받는 매개변수, 변수명은 사용자가 알아서 정의하면 됨) {
+                        // console.log(data);
+                        if (data.length > 0) {
+                            let tb = $("<table />"); // 메모리상에 <table></table> 구조가 생성
+                            
+                            // 데이터 수 많큼 반복
+                            for (let i in data) {
+                                let u_id         = data[i].id;
+                                let u_first_name = data[i].first_name;
+                                let u_last_name  = data[i].last_name;
+                                let u_email      = data[i].email;
+                                let u_gender     = data[i].gender;
+
+                                // <tr><td>u_id</td><td>u_first_name</td><td>u_last_name</td><td>u_email</td><td>u_gender</td></tr>
+                                let row = $("<tr />").append(      
+                                    $("<td />").text(u_id),         
+                                    $("<td />").text(u_first_name), 
+                                    $("<td />").text(u_last_name),  
+                                    $("<td />").text(u_email),      
+                                    $("<td />").text(u_gender)      
+                                );                                  
+
+                                tb.append(row);
+                            };
+
+                            // 위의 for문 작업이 끝나면 <table><tr><td></td></tr>........</table>
+                            $(".wrap").append(tb);
+                        };                        
+                    }
+                });
+            });
+        });
+    </script>    
+</head>
+<body>
+    <h3>ajax로 json 데이터 사용하기(바인딩)</h3>
+    <button type="button">json읽어오기</button>
+    <div class="wrap"></div>
+</body>
+</html>

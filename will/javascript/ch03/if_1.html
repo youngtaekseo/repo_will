@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제어문</title>
+</head>
+<body>
+    <h3>제어문 : if문</h3>
+
+    <script>
+        // 값을 입력하고 확인 클릭하면 입력한 값이 변수에 저장된다
+        // 취소를 클릭하면 변수에 null이 저장된다
+        var walkAmount = prompt("오늘 하루 걸을수","0");
+
+        alert(walkAmount); // walkAmount 변수값을 출력하는 대화상자
+
+        if(walkAmount >= 10000) {
+            document.write("좋은 습관입니다.","<br>");
+        }
+
+        document.write("프로그램 종료!!","<br>");
+    </script>
+</body>
+</html>

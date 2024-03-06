@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Content - text("데이터"), html("데이터"), val("데이터")</title>
+
+    <!-- CDN(Content Delivery Network) 방식 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>      
+
+    <script>
+        $(document).ready(function() {
+            $("#btn_info").click(function() {
+                // $("선택자").text(), $("선택자").html() : 선택자가 폼양식태그(input, select, textarea)를 제외한 태그
+                $("#spring").text("<b>스프링</b>"); // 태그효과 적용않됨
+                $("#java").html("<b>자바</b>");     // 태그효과 적용됨
+
+                // $("선택자").val() : 선택자가 input, select, textarea 태그에서만 지원
+                $("#test").val("테스트");  
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3>Set Content - text("데이터"), html("데이터"), val("데이터")</h3>
+
+    <p id="spring"><b>Spring</b></p>
+    <p id="java"><b>Java</b></p>
+    <input type="text" id="test"><br><br>
+    <button id="btn_info">내용변경하기</button>
+</body>
+</html>

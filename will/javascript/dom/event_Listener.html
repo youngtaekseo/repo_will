@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 리스너(Listener)를 사용</title>
+</head>
+<body>
+    <h3>이벤트 리스너(Listener)를 사용</h3>
+
+    <p>현재날짜와 시간</p>
+    <p id="result"></p>
+    <button type="button" id="btn_timeInfo1" >현재날짜/시간확인1</button>
+    <button type="button" id="btn_timeInfo2" >현재날짜/시간확인2</button>
+
+    <script>     
+        // 여러개의 함수를 사용이 가능
+
+        // 방법1                  
+                                             // addEventListener("이벤트명", 함수명)
+        document.getElementById("btn_timeInfo1").addEventListener("click", displayDate); // 많이 사용하는 스타일
+        document.getElementById("btn_timeInfo1").addEventListener("click", myMessage);   // 많이 사용하는 스타일
+
+        function displayDate() {
+            document.getElementById("result").innerHTML = Date();
+        }        
+        
+        function myMessage() {
+            alert("현재 날짜및시간 정보입니다");
+        }
+
+        // 방법2
+                                             // addEventListener("이벤트명", 익명함수명)
+        document.getElementById("btn_timeInfo1").addEventListener("click", function(){document.getElementById("result").innerHTML = Date();});
+    </script>
+</body>
+</html>

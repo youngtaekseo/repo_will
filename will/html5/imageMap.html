@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Image Maps</h2>
+    <p>컴퓨터 클릭, 폰 클릭, 커피잔 클릭시 각각 새로운 페이지로 연결</p>
+    <img src="/image/workplace.jpg" usemap="#workmap">
+    <map name="workmap">
+        <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.html">
+        <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.html">
+        <area shape="circle" coords="337,300,44" alt="Cup of Coffee" href="coffee.html">
+    </map>
+</body>
+</html>

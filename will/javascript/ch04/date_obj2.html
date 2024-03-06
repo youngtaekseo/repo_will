@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내장객체 : Date</title>
+</head>
+<body>
+    <h3>내장객체 : Date</h3>
+
+    <script>
+        let now = new Date();
+        document.write("현재날짜 : " + now, "<br>");
+
+        // 스프링에서 데이터베이스의 날짜정보를 json으로 변환되어 보내질때 밀리세컨드단위로 처리된다
+        let time = now.getTime();
+        document.write("현재날짜 : " + time, "<br>");
+        
+        let minute = 1000   * 60;
+        let hour   = minute * 60;
+        let day    = hour   * 24;
+        let year   = day    * 365;
+
+        document.write("1970년 1월 1일 부터 현재까지 경과된 년도 : " + (time/year), "<br>");
+        document.write("1970년 1월 1일 부터 현재까지 경과된 일수 : " + (time/day), "<br>");
+        document.write("1970년 1월 1일 부터 현재까지 경과된 시간 : " + (time/hour), "<br>");
+        document.write("1970년 1월 1일 부터 현재까지 경과된   분 : " + (time/minute), "<br>");
+
+        let now2 = new Date(time);
+        document.write("현재날짜 : " + now2, "<br>");
+    </script>
+</body>
+</html>

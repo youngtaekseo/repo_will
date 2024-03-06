@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* position:특정위치에 태그를 위치시킴 */       
+        div.relative {
+            position: relative;
+            width: 400px;
+            height: 200px;
+            border: 3px solid #73AD21;
+        }
+
+        /* 부모가 position: relative; 가 있는 경우는 div.relative 기준으로 위치시킨다
+           부모가 position: relative; 가 없는 경우는 브라우저를 기준으로 위치시킨다
+        */
+        div.absolute {
+            position: absolute;
+            top: 80px;
+            right: 0;
+            width: 200px;
+            border: 3px solid #73AD21;
+        }        
+    </style>
+</head>
+<body>
+    <h2>position: absolute;</h2>
+
+    <p>An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed):</p>
+    
+    <!-- 자식 div태그가 position: absolute; 명령어를 사용시 기준이 되는 태그는
+         부모 div태그가 position: relative; 기능이 적용되어 있으면, 기준이 부모 div태그가 되고
+         position: relative; 기능이 적용되어 있지않으면, body태그가 기준되어
+         position: absolute;와 top: 80px; right: 0; 의 좌표에 표시된다
+     -->
+    <div class="relative">This div element has position: relative;
+      <div class="absolute">This div element has position: absolute;</div>
+    </div>   
+</body>
+</html>

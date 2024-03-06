@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    alert("Background color = " + $("p").css("background-color")); // $("p") 태그의 첫번째 속성(background-color)정보를 읽어온다
+    alert("font size = " + $("p.p3").css("font-size")); // $("p") 태그의 첫번째 속성(font-size)정보를 읽어온다
+
+    $(".p3")
+  });
+});
+</script>
+</head>
+<body>
+
+<h2>This is a heading</h2>
+
+<p class="p1" style="background-color:#ff0000; font-size: 25px;">This is a paragraph.</p>
+<p class="p2" style="background-color:#00ff00; font-size: 20px;">This is a paragraph.</p>
+<p class="p3" style="background-color:#0000ff; font-size: 15px;">This is a paragraph.</p>
+<p id="disp_color"></p>
+<p id="disp_size"></p>
+<button>Return background-color of p</button>
+
+</body>
+</html>
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery 메소드 : map(), $.grep()</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+            let arr1 = [
+                {"area":"서울", "name":"무대리"},
+                {"area":"서울", "name":"서부장"},                
+                {"area":"부산", "name":"홍과장"},
+                {"area":"대전", "name":"박사장"}
+            ];
+
+            console.log("========= map() =========");
+
+            // arr1 배열에서 area가 서울인 데이터를 배열로 추출할 때
+            let arr2 = $.map(arr1, function(a, b) { // a:배열테이터 참조, b:인덱스
+                if (a.area == "서울") {
+                    return a;
+                };
+            });
+
+            console.log(arr2);
+
+            console.log("========= $.grep() =========");
+
+            // 서울 일치되는 데이터가 오름차순으로 정렬되어 arr3 배열로 저장된다
+            let arr3 = $.grep(arr1, function(a, b) { 
+                if (a.area == "서울") {
+                    return true;
+                } else {
+                    return false;
+                };
+            });
+
+            console.log(arr3);
+        });
+    </script>
+</head>
+<body>
+    <h3>jquery 메소드 : map(), $.grep()</h3>
+</body>
+</html>

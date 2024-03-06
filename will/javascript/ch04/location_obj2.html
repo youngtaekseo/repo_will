@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>  
+</head>
+<body>
+    <h2>JavaScript</h2>
+
+    <h3>The window.location object</h3>
+    
+    <input type="button" value="새창열기 - assign" onclick="newDocAssign()">
+    <input type="button" value="새창열기 - href (권장방식)" onclick="newDocHref()">
+    
+    <script>
+        function newDocAssign() {
+          location.assign("https://www.w3schools.com");
+        }
+
+        function newDocHref() {
+          location.href = "https://www.w3schools.com"; // 권장하는 사용법
+        }        
+    </script>
+</body>
+</html>

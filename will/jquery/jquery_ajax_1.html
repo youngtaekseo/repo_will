@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        // jquery ready 이벤트 약식표현
+        $(function(){
+            $("button").click(function(){
+                // $("선택자").load("서버측의 파일명 또는 매핑주소"); - 전체읽기
+                // $("선택자").load("서버측의 파일명 또는 매핑주소 선택자"); - 선택자 내용만 읽기
+                // $("#newsWrap_1").load("jquery_ajax_news.html #news_1"); - jquery_ajax_news.html 파일내용중 선택자(#news_1) 내용만 읽기
+                $("#newsWrap_1").load("jquery_ajax_news.html #news_1");
+                $("#newsWrap_2").load("jquery_ajax_news.html #news_2");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>LOAD 1</h1>
+    <div id="newsWrap_1"></div>
+    <h1>LOAD 2</h1>
+    <div id="newsWrap_2"></div>
+
+    <button type="button">ajax클릭</button>
+</body>
+</html>

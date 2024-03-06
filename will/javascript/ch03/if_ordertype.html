@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건식 : if문</title>
+</head>
+<body>
+    <h3>조건식 : if문</h3>
+
+    <script>
+        // 조건식에 논리형 데이터가 아닌 다른 형이오면 false 로 인신된다
+        // 0, null, "" (빈문자), undefined
+
+        var result; // 변수선언만 하면 초기값은 undefined
+
+        // result 변수의 값이 undefined 이면 조건식에서 false로 처리된다
+        if(!result) {
+            document.write(result, "<br>");
+        }
+
+        result = 0;
+        if(!result) {
+            document.write(result, "<br>");
+        }        
+
+        result = ""; // 문자의 길이가 0인표현, 용어로는 빈문자열
+        if(!result) {
+            document.write(result, "<br>");
+        }        
+        
+        result = null;
+        if(!result) {
+            document.write(result, "<br>");
+        }             
+        
+        result = -1; // 0 이외의 다른 숫자값이 사용디되면 true로 해석됨
+        if(result) {
+            document.write(result, "<br>");
+        }      
+    </script>
+</body>
+</html>

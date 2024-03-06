@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>중첩 for문을 이용한 구구단 예제</title>
+</head>
+<body>
+    <h3>중첩 for문을 이용한 구구단 예제</h3>
+
+    <script>
+        // i변수가 곱
+        // j변수가 단
+
+        // 첫번째 for문이 곱기능
+        // 두번째 for문이 단기능
+        document.write("<table border='1px'>");
+            
+        document.write("<tr>");
+        for(let dan = 2; dan <= 9; dan++) {
+            document.write("<td>");
+            document.write(dan + "단");
+            document.write("</td>");
+        }
+        document.write("</tr>");
+
+        for(let i = 1; i <= 9; i++) {
+            document.write("<tr>");
+
+            for(let j = 2; j <= 9; j++) {
+                document.write("<td>");
+                document.write(j + "*"+ i + "=" + (j*i));
+                document.write("</td>");
+            } 
+            document.write("</tr>");
+        }
+        
+        document.write("</table>");
+    </script> 
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자정의객체</title>
+</head>
+<body>
+    <h3>사용자정의 객체정의 및 사용</h3>
+    <script>
+        // 시나리오
+        // 개인정보
+        /*
+        속성
+            이름:홍길동
+            나이:100
+            국적:대한민국
+
+        메서드
+            정보:이름은 홍길동이고 나이는 100세, 국적은 대하민국입니다.
+
+        수정내용
+            이름 : 홍길동 -> 홍길도
+            나이 : 100 -> 101세
+        */
+
+        let person = {
+            name        : "홍길동",
+            age         : 100,
+            nationality : "대한민국",
+            info : function() {
+                // document.write("이름은 "+this.name +"이고 나이는 " + this.age + "세, 국적은 " + this.nationality + "입니다.", "<br>");
+                document.write("이름은 "+this.name +"이고 ", "나이는 " + this.age + "세, ", "국적은 " + this.nationality + "입니다.", "<br>");
+            }
+        };
+
+        person.info();
+
+        person.name = "홍길도";
+        person.age  = 101;
+        person.info();
+    </script>
+</body>
+</html>

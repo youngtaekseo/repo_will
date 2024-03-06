@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자정의객체</title>
+</head>
+<body>
+    <h3>사용자정의객체</h3>
+
+    <script>
+        // 사용자정의객체를 생성하는 문법
+        // let 변수명 = new 생성자함수();  -- new : 메모리 생성 명령어
+
+        // 단수 데이터 1개저장
+        // 예) let tv = "삼성";
+
+        // 1)번 유형
+        let tv = new Object(); // 컨테이너 성격의 기억장소를 만들고 그곳의 주소를 tv에 저장한다
+
+        // tv객체에 필요한 정보(상태)를 저장하기위한 실질적인 기억장소를 설계 - 속성(property)
+        tv.color = "white"; // 색상의 기본값
+        tv.price = 300000;  // 가격의 기본값
+
+        // tv객체의 기능 - 메서드
+        tv.info = function() {
+            document.write("tv 색상: " + this.color, "<br>");
+            document.write("tv 가격: " + this.price, "<br>");
+        };
+
+        // tv객체 사용
+        document.write("<h3>tv객체 사용</h3>");
+        tv.info();
+
+        tv.color = "red";
+        tv.info();
+
+        // 2)번 유형
+        /*
+        let 변수명 = {
+            속성명 : 값,
+            속서명 : 값,
+            메서드 : function()
+        };
+        */
+        let car = {
+            color : "black",
+            price : 50000000,
+            info : function() {
+                document.write("car 색상: " + this.color, "<br>");
+                document.write("car 가격: " + this.price, "<br>");                
+            }
+        };
+
+        // car객체 사용
+        document.write("<h3>car객체 사용</h3>");
+        car.info();  
+        
+        car.color = "pink";
+        car.info();
+    </script>
+</body>
+</html>

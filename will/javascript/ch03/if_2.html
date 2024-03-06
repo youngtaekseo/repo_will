@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제어문</title>
+</head>
+<body>
+    <h3>제어문 : if문</h3>
+
+    <script>
+        var min = prompt("당신의 통화량은 얼마입니까?", "0");
+
+        // 조건식에 논리형 데이터가 아닌 다른 형이오면 false 로 인신된다
+        // 0, null, "" (빈문자), undefined
+        if(min >= 60) {
+            document.write("많이 사용하는 편입니다.","<br>");
+        }
+
+        document.write("프로그램 종료!!","<br>");
+    </script>
+</body>
+</html>

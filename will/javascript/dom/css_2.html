@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 제어</title>
+</head>
+<body>
+    <h3>CSS 제어</h3>
+
+    <p id="p1">HTML5</p>
+    <p id="p2">CSS3</p>
+    <button type="button" onclick="cssDispley()">CSS효과주기</button>
+
+    <script>
+        function cssDispley() {
+            document.getElementById("p2").style.color       = "red";
+            document.getElementById("p2").style.fontFamily  = "alert";
+            document.getElementById("p2").style.fontSize    = "30px";
+        };
+    </script>
+</body>
+</html>

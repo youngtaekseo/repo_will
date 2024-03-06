@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 리스너(Listener)를 통한 파라미터 전달</title>
+</head>
+<body>
+    <h3>이벤트 리스너(Listener)를 통한 파라미터 전달</h3>
+
+    <button type="button" id="btn_Info" >이벤트</button>
+    <p id="result"></p>
+
+    <script>     
+        let p1 = 5;
+        let p2 = 7;
+
+        document.getElementById("btn_Info").addEventListener("click", function(){mul(p1, p2)});
+
+        function mul(a, b) {
+            document.getElementById("result").innerHTML = a * b;
+        }
+    </script>
+</body>
+</html>

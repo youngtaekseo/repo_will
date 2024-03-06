@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기 함수정의</title>
+</head>
+<body>
+    <h3>계산기 함수정의</h3>
+
+    <script>
+        // 2개의 매개변수를 갖는 함수(매개변수1:숫자, 매개변수2:사칙연산자, 매개변수3:숫자)
+        function calc(left, op, right) {
+            let result = 0;
+
+            switch(op) {
+                case "+" :
+                    result = left + right;
+                    break;
+                case "-" :
+                    result = left - right;
+                    break;
+                case "*" :
+                    result = left * right;
+                    break;
+                case "/" :
+                    result = left / right;
+                    break;                                                            
+            }
+
+            return result;
+        }
+
+        let result = calc(10, "*", 10);
+        document.write(result, "<br>");      
+    </script>
+</body>
+</html>

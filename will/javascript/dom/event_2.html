@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+
+    <style>
+        #loop {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h3>이벤트</h3>
+
+    <p onclick="changeText(this)">스프링</p>
+
+    <p id="loop">스프링</p>
+    <p id="start"></p>
+    <p id="end"></p>
+
+    <script>
+        const disp = document.getElementById("loop");
+        disp.addEventListener("click", changeText2);
+
+        let voDelay;
+        let viSecond = 0;
+
+        function dispText() {
+            viSecond++;
+
+            if (disp.innerHTML == "스프링") {
+                disp.innerHTML      = "Spring"
+                disp.style.color    = "red";
+                disp.style.fontSize = "20px";
+            } else {
+                disp.innerHTML      = "스프링"
+                disp.style.color    = "blue";
+                disp.style.fontSize = "20px";
+            }
+
+            document.getElementById("end").innerHTML = Date();
+
+            // 5초가되면 setInterval을 종료한다
+            if (viSecond == 5) {
+                viSecond = 0;
+                clearInterval(voDelay);
+            }
+        }
+
+        function changeText2() {  
+            document.getElementById("start").innerHTML = Date();          
+            voDelay = setInterval(dispText, 1000);
+        }
+
+        function changeText(obj) {
+            obj.innerHTML = "Spring";
+        }        
+    </script>    
+</body>
+</html>

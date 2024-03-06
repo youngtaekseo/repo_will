@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 태그 유효성검사</title>
+
+    <script>
+        // 로그인 유효서 검사 함수
+        function sendit() {
+            // alert("유효성검사");
+            let u_id = document.getElementById("u_id");
+            let u_pw = document.getElementById("u_pw");
+
+            if (u_id.value == "") {
+                alert("아이디를 입력하세요");
+                u_id.focus();
+                return; // function sendit() 종료, 아래로 진행되지 않는다, input type="button" 일때 return; 사용한다
+            }
+            
+            if (u_pw.value == "") {
+                    alert("비밀번호를 입력하세요");
+                    u_pw.focus();
+                    return;
+            }
+
+            document.getElementById("loginForm").submit();
+        }
+    </script>
+</head>
+<body>
+    <h3>form 태그 유효성검사</h3>
+    
+    <form name="loginForm" id="loginForm" action="로그인 검사를 할 서버측의 파일" method="post">
+        아이디&nbsp;&nbsp;&nbsp;&nbsp;: <input type="text"     id="u_id" name="u_id" placeholder="아이디 입력"><br>
+        비밀번호 :                      <input type="password" id="u_pw" name="u_pw" placeholder="비밀번호 입력"><br>
+        <input type="button" value="로그인" onclick="sendit()">
+    </form>
+</body>
+</html>

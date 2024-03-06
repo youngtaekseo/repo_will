@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>논리연산자</title>
+</head>
+<body>
+    <h3>논리연산자 : &&(and 논리연산자), ||(or 논리연산자), !(not 연산자)</h3>
+
+    <script>
+        var a = 10;
+        var b = 20;
+        var m = 30;
+        var n = 40;
+        var result;
+
+        // || : or 논리연산자
+        result = true || true; // true
+        document.write("true || true -->", result, "<br>");
+        
+        result = true || false; // true
+        document.write("true || false -->", result, "<br>");
+        
+        result = false || true; // true
+        document.write("false || true -->", result, "<br>");
+        
+        result = false || false; // false
+        document.write("false || false -->", result, "<br>");
+
+        // && : and 논리연산자
+        result = true && true; // true
+        document.write("true && true -->", result, "<br>");
+        
+        result = true && false; // false
+        document.write("true && false -->", result, "<br>");
+        
+        result = false && true; // false
+        document.write("false && true -->", result, "<br>");
+        
+        result = false && false; // false
+        document.write("false && false -->", result, "<br>");
+
+        // 책 예제소스
+        result = (a > b) || (b >= m) || (m > n); // false
+        document.write(`(${a} > ${b}) || (${b} >= ${m}) || (${m} > ${n}) --> ${result} <br>`);
+
+        result = (a <= b) && (b >= m) || (m <= n); // true
+        document.write(`(${a} <= ${b}) && (${b} >= ${m}) || (${m} <= ${n}) --> ${result} <br>`);
+
+        result = !(a > b); // true
+        document.write(`!(${a} > ${b}) --> ${result} <br>`);        
+    </script>
+</body>
+</html>

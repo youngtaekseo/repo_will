@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Content</title>
+
+    <!-- CDN(Content Delivery Network) 방식 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>      
+
+    <script>
+        $(document).ready(function() {
+            $("#btn_info").click(function() {
+                // $("선택자").text(), $("선택자").html() : 선택자가 폼양식태그(input, select, textarea)를 제외한 태그
+                console.log($("#html5").text()); // 태그내용 읽기, 태그제외
+                console.log($("#css3").html());  // 태그내용 읽기, 태그포함
+
+                // $("선택자").val() : 선택자가 input, select, textarea 태그에서만 지원
+                console.log($("#test").val());  
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3>Get Content - text(), html(), val()</h3>
+
+    <p id="html5"><b>HTML5</b></p>
+    <p id="css3"><b>CSS3</b></p>
+    <input type="text" id="test"><br><br>
+    <button id="btn_info">내용읽어오기</button>
+</body>
+</html>

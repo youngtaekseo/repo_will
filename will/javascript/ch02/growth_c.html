@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>증감 연산자</title>
+</head>
+<body>
+    <h3>증감 연산자 : ++, --</h3>
+
+    <script>
+        var num1 = 10;
+        var num2 = 20;
+        var result;
+
+        // 사용법 : ++변수, 변수--
+        // 기능 : 변수에 +1을 한 값을 저장, 변수에 -1을 한 값을 저장,
+        // 증감연산자가 변수 앞에 사용되면, 전위형 증감연산자 예) ++변수, --변수
+        // 증감연산자가 변수 위에 사용되면, 후위형 증감연산자 예) 변수++, 변수--
+        result = num1-- + 10; // result = num1 + 10; num1 = num1 - 1;
+        document.write(result, "<br>"); // 변수앞 또는 변수뒤에 증감연산자는 동작시점에 따라 값이 다르다
+        document.write(num1, "<br>");  // 변수앞 또는 변수뒤에 증감연산자는 값이 동일하게 진행된다
+    </script>
+</body>
+</html>

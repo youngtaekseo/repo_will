@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 리스너(Listener)를 통한 제거하기</title>
+</head>
+<body>
+    <h3>이벤트 리스너(Listener)를 통한 제거하기</h3>
+
+    <p>현재날짜와 시간</p>
+    <p id="result"></p>    
+    <button type="button" id="btn_timeInfo">현재날짜/시간확인</button>
+    <button type="button" onclick="removeHandler()" >이벤트 제거</button>
+
+    <script>
+        // 이벤트 설정
+        document.getElementById("btn_timeInfo").addEventListener("click", displayDate); // 함수(displayDate)에 ()를 사용하지 않는다 
+        // setEvent();
+
+        // 이벤트 제거
+        function removeHandler() {
+            document.getElementById("btn_timeInfo").removeEventListener("click", displayDate); // 함수(displayDate)에 ()를 사용하지 않는다
+
+            // 2초 후 이벤트 재설정
+            setTimeout(setEvent, 2000);
+        }        
+
+        // 이벤트 재설정
+        function setEvent() {
+            document.getElementById("btn_timeInfo").addEventListener("click", displayDate); // 함수(displayDate)에 ()를 사용하지 않는다 
+        }
+
+        function displayDate() {
+            document.getElementById("result").innerHTML = Date();
+        }       
+    </script>  
+</body>
+</html>

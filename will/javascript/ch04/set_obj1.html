@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>    
+    <h2>JavaScript Timing</h2>
+
+    <p>Click "Try it". Wait 3 seconds. The page will alert "Hello".</p>
+    <p>Click "Stop" to prevent the first function to execute.</p>
+    <p>(You must click "Stop" before the 3 seconds are up.)</p>
+
+    <!-- myFunction 사용할 때 () 를 붙이지 않는다 -->
+    <button onclick="setTimeout(myFunction, 3000)">Try it</button>
+
+    <script>
+        function myFunction() {
+            alert('Hello');
+        }
+    </script>  
+
+    <br><br>
+
+    <!-- myFunction 사용할 때 () 를 붙이지 않는다 -->
+    <button onclick="myVar = setTimeout(myFunction, 3000)">Try it</button>
+    
+    <!-- 위 코드 3초 전에 동작을 취소하려면 버튼을 클릭한다 -->
+    <button onclick="clearTimeout(myVar)">Stop it</button> 
+
+    <script>
+        function myFunction() {
+            alert('Hello');
+        }
+    </script>    
+</body>
+</html>

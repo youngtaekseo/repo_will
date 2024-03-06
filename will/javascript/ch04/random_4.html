@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>랜덤 : Math.random</title>
+</head>
+<body>
+    <h3>랜덤 : Math.random</h3>
+    <p>특정 구간의 값은 출력하는 예제</p>
+    <p>1~10 범위의 숫자중 랜덤으로 값을 출력하는 예제</p>
+
+    <script>
+        let min = 1;
+        let max = 10;
+        let num = Math.floor(Math.random() * (max - min + 1)) + min;
+
+        document.write(min + "~" + max + "범위의 숫자중 랜덤값은?", num, "<br><br>");
+
+        let vsTitle;
+        vsTitle = "title : " + document.title;
+        document.write(vsTitle);
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input 태그 유효성검사</title>
+
+    <script>
+        function validate() {
+            let num = document.getElementById("num");
+
+            // isNaN(값) : 값이 숫자가 아닐 경우 true를 반환
+            if (isNaN(num.value) || num.value < 1 || num.value > 10) {
+                alert("1~10범위의 숫자를 입력하세요");
+                return; // 함수종료
+            }
+
+            document.forms[0].submit(); // 문서내의 첫번째 form태그를 참조하여 해당 form태그정보를 전송
+        }
+    </script>
+</head>
+<body>
+    <h3>input 태그 유효성검사</h3>
+
+    <form action="서버측에서 동작하는 파일" method="post">
+        숫자를 입력하세요. <input type="text" id="num" placeholder="1~10범위의 숫자만 입력하세요."><br>
+        <input type="button" value="숫자체크" onclick="validate();">
+    </form>
+</body>
+</html>

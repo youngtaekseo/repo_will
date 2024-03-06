@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>효과</title>
+
+    <!-- CDN(Content Delivery Network) 방식 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>    
+
+    <script>
+        $(document).ready(function() {
+            $("#hide").click(function() {
+                //$("p").hide();
+                //$("p").hide(1000);
+                $("p").hide(1000, function() {
+                    alert("화면에서 사라짐");
+                });
+
+                // $("p").toggle(); // hide, show를 반복
+            });
+
+            $("#show").click(function() {
+                //$("p").show();
+                // $("p").show(1000);
+                $("p").show(1000, function() {
+                    alert("화면에 표시됨");
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3>효과</h3>
+    <p>jQuery를 배우자</p>
+    <button type="button" id="hide">숨기기</button>
+    <button type="button" id="show">보이기</button>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arguments</title>
+</head>
+<body>
+    <h3>arguments</h3>
+    <p>arguments : 매개변수없이 함수에 전달된 값 받아오기 - 비추천</p>
+
+    <script>
+
+        // 함수
+        function sum() {
+            return arguments[0] + arguments[1] + arguments[2];
+        }
+
+        let total = sum(70, 80, 90);
+        document.write("당신의 3과목 더한 총점수는? ", total);
+    </script>
+</body>
+</html>

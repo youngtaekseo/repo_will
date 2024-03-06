@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <h3>자바스크립트 ajax 기능 : XMLHttpRequest 객체이용</h3>
+    <h3>JQuery의 load() 메소드 기능을 실행하면 작동되는 실직적인 코드</h3>
+
+    <div id="demo">
+      <p>Let AJAX change this text.</p>
+      <button type="button" onclick="loadDoc()">Change Content</button>
+    </div>    
+
+    <script>
+        function loadDoc() {
+          const xhttp = new XMLHttpRequest();
+
+          // xhttp객체 서버에게 요청을 하여 정상적으로 응답을 받아오면 아래코드가 실행된다
+          xhttp.onload = function() {
+            // 실행코드
+            document.getElementById("demo").innerHTML = this.responseText; // this 는 xhttp를 의미함
+          };
+
+          // xhttp.open("요청방식", "서버측 파일명 또는 매핑주소");
+          xhttp.open("GET", "ajax_info.txt");
+
+          // 실직적으로 서버에 요청하는 기능
+          xhttp.send();
+        };
+    </script>
+</body>
+</html>

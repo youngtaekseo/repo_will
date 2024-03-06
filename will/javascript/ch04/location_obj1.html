@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript</h2>
+
+    <h3>The window.location object</h3>
+    
+    <p id="url"></p>
+    <p id="hostname"></p>
+    <p id="path"></p>
+    <p id="protocol"></p>
+    <p id="Port"></p>
+    <!--  
+                  브라우저 객체의 계층도
+                         window
+           ________________|_________________
+           |        |      |       |        |
+        document screen loction history navigator
+    -->
+    <script>
+        // location.href : 현재페이지의 url을 읽어오는 명령어
+        document.getElementById("url").innerHTML = "현재페이지의 url:<br>" + location.href;
+
+        document.getElementById("hostname").innerHTML = "현재페이지의 hostname: <br>" + location.hostname;   
+        
+        document.getElementById("path").innerHTML = "현재페이지의 path: <br>" + location.pathname;        
+
+        document.getElementById("protocol").innerHTML = "현재페이지의 protocol: <br>" + location.protocol;
+
+        // 네트워크 기능을 가지고 있는 프로그램 식별하기위한 용도
+        document.getElementById("Port").innerHTML = "현재페이지의 Port number: <br>" + location.port;
+    </script>    
+</body>
+</html>

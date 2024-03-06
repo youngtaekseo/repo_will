@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+            border: 1px solid darkgray; /* 굵기 선종류 선색상 */
+            padding: 10px 20px 10px 20px; /* top right bottom left */
+        }
+
+        table {
+            width: 60%;
+        }
+
+        th {
+            width: 20%;
+            text-align: left;
+        }
+
+        .top {
+            border: 0px;
+        }
+
+        .title {
+            background-color: darkgray;
+        }
+
+        .data {
+            border-top: 0px;
+            border-right: 0px;
+            border-left: 0px;
+        }
+
+        .data_name {
+            border: 1px solid darkgray;
+            border-right: 0px;
+            border-left: 0px;            
+        }
+
+        div {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .submit_reset {
+            width: 100px; 
+            color: white
+        }
+    </style>
+</head>
+<body>
+    <form id="info">
+        <table>
+            <thead>
+                <tr>
+                    <th class="top" style="text-align: left; padding-left: 0%;">&#128196;&nbsp;기본정보</th>
+                    <td class="top" style="text-align: right; padding-right: 0%;">&#10004;&nbsp;표시 항목은 필수 입력 항목입니다.</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="title"><label for="name">&#10004;&nbsp;&nbsp;이름</label></th>
+                    <td class="data data_name">
+                        <input id="name" type="text" required autocomplete="off">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="title"><label for="id">&#10004;&nbsp;&nbsp;아이디</label></th>
+                    <td class="data">
+                        <input id="id" type="text" minlength="6" maxlength="16" required autocomplete="off">
+                        <input type="button" value="&#10004;&nbsp;&nbsp;아이디중복확인"><br>
+                        &#128172;6~16까지 영문자(소문자), 숫자 사용 가능합니다.
+                    </td>
+                </tr>
+                <tr>
+                    <th class="title"><label for="passwd">&#10004;&nbsp;&nbsp;비밀번호</label></th>
+                    <td class="data">
+                        <input id="passwd" type="password" minlength="6" maxlength="16" required autocomplete="off"><br>
+                        &#128172;6~16까지 영문자(대문자,소문자), 숫자 및 특수문자 사용 가능합니다
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;3자리 연속 또는 같은 문자, 아이디는 사용하실 수 없습니다.
+                    </td>
+                </tr>
+                <tr>
+                    <th class="title"><label for="passwd_chk">&#10004;&nbsp;&nbsp;비밀번호 확인</label></th>
+                    <td class="data">
+                        <input id="passwd_chk" type="password" minlength="6" maxlength="16" required autocomplete="off">
+                        <label for="passwd_chk">비밀번호가 일치하지 않습니다.</label>
+                    </td>
+                <tr>
+                    <th class="title"><label for="date">&#10004;&nbsp;&nbsp;생년월일/성별</label></th>
+                    <td class="data">
+                        <input id="date" itype="date" autocomplete="off">
+                        <input type="radio" name="sex_gbn">남자<input type="radio" name="sex_gbn">여자
+                    </td>
+                </tr>
+                <tr>
+                    <th class="title"><label for="email_select">&#10004;&nbsp;&nbsp;이메일</label></th>
+                    <td class="data">
+                        <input id="email" type="text" required autocomplete="off">
+                        <span>&nbsp;&#64;&nbsp;</span>
+                        <input type="text" required autocomplete="off">
+                        <select id="email_select">
+                            <option value="" selected>메일주소선택</option>
+                            <option value="naver">네이버</option>
+                            <option value="google">구글</option>
+                            <option value="daum">다음</option>
+                            <option value="write">직접입력</option>
+                        </select>
+                        <input type="button" required value="&#10004;&nbsp;&nbsp;인증코드 발송"><br>
+                        <input type="text">
+                        <input type="button" style="margin-top: 3px;" required value="&#10004;&nbsp;&nbsp;인증확인">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="title"><label for="mobile">&#10004;&nbsp;&nbsp;연락처</label></th>
+                    <td class="data">
+                        <label for="mobile">휴대전화</label>
+                        <select name="mobile" id="mobile">
+                            <option value="" selected>선택</option>
+                            <option value="010">010</option>
+                            <option value="011">011</option>
+                            <option value="017">017</option>
+                            <option value="019">019</option>
+                        </select>
+                        <span>-</span>
+                        <input type="text" pattern="[0-9]{4}" maxlength="4" autocomplete="off">
+                        <span>-</span>
+                        <input type="text" pattern="[0-9]{4}" maxlength="4" autocomplete="off">
+                        <br>
+                        <label for="phone">일반전화</label>
+                        <select name="phone" id="phone">
+                            <option value="" selected>선택</option>
+                            <option value="02">서울</option>
+                            <option value="051">부산</option>
+                            <option value="053">대구</option>
+                            <option value="032">인천</option>
+                            <option value="062">광주</option>
+                            <option value="042">대전</option>
+                            <option value="052">울산</option>
+                            <option value="044">세종</option>
+                            <option value="031">경기</option>
+                            <option value="033">강원</option>
+                            <option value="043">충북</option>
+                            <option value="041">충남</option>
+                            <option value="063">전북</option>
+                            <option value="061">전남</option>
+                            <option value="054">경북</option>
+                            <option value="055">경남</option>
+                            <option value="064">제주</option>
+                        </select>
+                        <span>-</span>
+                        <input type="text" maxlength="4" autocomplete="off">
+                        <span>-</span>
+                        <input type="text" maxlength="4" autocomplete="off">   
+                        <br>
+                        &#128172;연락처는 둘 중 하나만 입력해도 됩니다.
+                    </td>
+                </tr>
+                <tr>
+                    <th class="title"><label for="postNo">&#10004;&nbsp;&nbsp;우편번호</label></th>
+                    <td class="data">
+                        <input id="postNo" type="text" pattern="[0-9]{5}" maxlength="5" autocomplete="off">
+                        <input type="button" value="&#128269;주소검색">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="title"><label for="addr1">&#10004;&nbsp;&nbsp;주소</label></th>
+                    <td class="data">
+                        <input id="addr1" type="text" autocomplete="off" size="69">
+                        <br>
+                        <input id="addr2" type="text" autocomplete="off" size="69">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="title">정보수집 여부</th>
+                    <td class="data">서비스 및 소식을 <input type="checkbox">Email로 수신하겠습니다. <input type="checkbox">SMS로 수신하겠습니다.</td>
+                </tr>                
+            </tbody>
+        </table>
+
+        <div style="width: 60%;">
+            <input class="submit_reset" type="submit" style="background-color: chocolate;" value="&#10004;&nbsp;&nbsp;저장">
+            <input class="submit_reset" type="reset" style="background-color: gray;" value="취소"></input>
+        </div>
+    </form>
+</body>
+</html>

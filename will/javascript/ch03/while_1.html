@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문 : while</title>
+</head>
+<body>
+    <h3>반복문 : while</h3>
+
+    <script>
+        let i = 1;
+        let ii;
+
+        // i변수가 1에서 10까지 true 일때만 안에 코드가 동작된다
+        // i변수가 11이 되면 false가 되어 while문을 빠져나온다
+        while(i <= 10) {
+            ii = i.toString;
+
+            document.write(ii, "<br>");
+
+            if(ii.length == 1) {
+                ii = "0"+i;
+            }
+            // document.write(ii.length);
+            document.write(ii + " -> 안녕하세요", "<br>");
+            i++;
+        }
+        
+        document.write("프로그램 종료!!");
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>태그의 속성값 변경하기</title>
+
+    <!-- CDN(Content Delivery Network) 방식 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#btn1").click(function() {
+                // 네이버를 다음 주소로 변경작업
+                // $("#test").attr("href", "변경주소");
+                $("#test").attr("href", "http://www.daum.net");
+
+                // 네이버명칭을 다음으로 변경
+                $("#test").text("다음");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3>태그의 속성값 변경하기</h3>
+
+    <a id="test" href="http://www.naver.com">네이버</a><br>
+    <button id="btn1">클릭</button>
+</body>
+</html>

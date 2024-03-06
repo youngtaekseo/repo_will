@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h3>document.querySelectorAll() 메소드</h3>
+    <p class="intro">HTML5</p>
+    <p class="intro">CSS3</p>
+    <p>JavaScript</p>
+    <p id="demo"></p>
+
+    <script>
+        const elements = document.querySelectorAll("p.intro"); // 10, 11줄의 p태그 참조
+
+        //outerHTML은 속성, 시작 태그 및 종료 태그를 포함하여 HTML 요소를 설정하거나 반환합니다.
+        document.getElementById("demo").innerHTML = elements[0].innerHTML; // 10 줄의 p태그 내용
+    </script>    
+</body>
+</html>

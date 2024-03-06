@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery 메소드 : each(), $.each()</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        // $(document).ready(function(){}); 아래는 약식 표현
+        $(function() {
+            let obj = [ // 배열은 여러개의 기억장소를 하나로 관리하는 개념
+                {"area":"서울"},
+                {"area":"부산"},
+                {"area":"전주"}
+            ];
+
+            console.log("========= 작업1 =========");
+
+            // jquery 메소드 사용법 : 메소드(function(){});
+            $(obj).each(function(i, o){
+                console.log(i + " : ", o);
+            });
+
+            console.log("========= 작업2 =========");
+
+            $.each($("#menu1 li"), function(i, o){
+                console.log(i + " : ", o);
+            });
+
+            console.log("========= 작업3 =========");
+
+            $.each($("#menu2 li"), function(i){
+                console.log(i + " : ", $(this)); // $(this) : 현재 반복되어 참조되고 있는 li
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3>jquery 메소드 : each(), $.each()</h3>
+
+    <h1>탐색 선택자</h1>
+    <ul id="menu1">
+        <li>내용1-1</li>
+        <li>내용1-2</li>
+        <li>내용1-3</li>
+    </ul>
+    <ul id="menu2">
+        <li>내용2-1</li>
+        <li>내용2-2</li>
+        <li>내용2-3</li>
+    </ul>    
+</body>
+</html>

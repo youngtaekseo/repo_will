@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html dom append</title>
+
+    <!-- CDN(Content Delivery Network) 방식 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        function appendCourse() {
+            // 태그만드는 방법
+            // 방법1 : 자바스크립트 이용
+            let course1 = "<p>CSS3</p>";
+            
+            // 방법2 : jQuery 이용
+            // <p>JavaScript</p>
+            let course2 = $("<p></p>").text("JavaScript");
+
+            // 방법3 : html DOM 이용
+            // <p>jQuery</p>
+            let course3 = document.createElement("p");
+            course3.innerHTML = "jQuery";
+
+            // body태그에 자식으로 추가
+            $("body").append(course1, course2, course3);
+        };
+    </script>
+</head>
+<body>
+    <button type="button" onclick="appendCourse()">과정추가</button>
+    <p>HTML5</p>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- 인코딩방법 -->
+    <meta name="keywords" content="HTML, CSS, JavaScript"> <!-- 검색엔진에 제공되는 문구 -->
+    <meta name="description" content="iframe 사용"> <!-- 웹페이지 설명 -->
+    <meta neme="author" content="홍길동"> <!-- 작성자 -->
+    <meta http-equiv="refresh" content="30"> <!-- 30초 후에 화면 재조회 진행 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 웹페이지 보여지는 기기에 최적화되어 보여지도록 한다 -->
+    <title>Document</title>
+</head>
+<body>
+    <h3>iframe 태그 사용 : 외부 사이트도 사용가능</h3>
+    <iframe src="table01.html" width="500" height="700" style="border: none;"></iframe>
+    <iframe src="http://www.daum.net" frameborder="0" width="500" height="700"></iframe>
+
+    <hr>
+    <iframe src="table01.html" width="800" height="400" style="border: none;" name="iframe_a"></iframe>    
+    <hr>
+    <p><a href="http://www.daum.net" target="iframe_a">Daum</a></p>
+</body>
+</html>

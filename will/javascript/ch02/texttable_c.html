@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수에 태그 저장하기</title>
+    <style>
+        .tick, .tick tr, .tick td {
+            box-sizing: border-box;
+            border: 1px solid red;
+            border-collapse: collapse; /* 테이블 테두리를 단일 테두리로 축소해야 하는지 여부를 설정합니다, 기본값:separate,  단일테두리:collapse*/
+        }
+    </style>
+</head>
+<body>
+    <h3>변수에 태그 저장하기</h3>
+    
+    <script>
+        var str;
+        
+        str = "<table border='1'>";
+        str += "<tr>";
+        str += "<td>1</td><td>2</td><td>3</td>"
+        str += "</tr>";
+        str += "</table> <br>";
+
+        document.write(str);
+
+        // 백틱을 이용한 예제
+        str = `<table class='tick'
+               <tr>
+                 <td>1</td>
+                 <td>2</td>
+                 <td>3</td>
+               </tr> 
+              `;
+
+        document.write(str);
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수</title>
+</head>
+<body>
+    <h3>변수</h3>
+    <p>변수란? 데이터를 저장하는 메로상의 공간을 가리키는 이름이다.</p>
+    <p>데이터? 숫자, 문자, 논리 등</p>
+
+    <script>
+        // 변수에 저장하는 데이터(자료형) : 숫자형(number), 문자형(character), 논리형(boolean)
+        // 숫자형 : -10, 0, 100, 10, 2321
+        // 문자형 : 큰따옴표("") 또는 작은따옴표가('') 감싼다. "10", '100', "홍길동"
+        // 논리형 : true, false
+
+        // 숫자형
+        var box; // box 라는 변수이름으로 기억장소가 생성된 의미
+        box = 100; // 100 이라는 숫자데이터를 box라는 변수가 가리키는 기억장소에 저장(대입)
+        box = 30;  // 30 이라는 데이터가 box라는 변수가 가리키는 기억장소에 저장, 기존 100은 삭제
+        document.write(box); // box라는 변수가 가리키는 기억장소의 내용을 읽어와서 화면에 출력
+
+        document.write("<br>"); // 태그 효과
+
+        // 문자형
+        var name;
+        name = "홍길동";
+        name = "홍길순";
+        document.write(name);
+        
+        document.write("<br>");
+
+        // 논리형
+        var idcheck;
+        idcheck = true;
+        idcheck = false;
+        document.write(idcheck);
+    </script>
+</body>
+</html>

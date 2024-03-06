@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+</head>
+<body>
+    <script>
+        // 모든 코드는 작성된 순서대로 동작이 된다
+        // 함수의 호이스팅(Hoisting 기능에 의하여 함수가 맨 앞에 위치를 시킨다)
+
+        // 전역변수
+        let count = 0;
+
+        // 함수가 뒤에 코드가 작성되어 있어도 호이스팅기능 때문에 정상적으로 동작
+        myFunc();
+
+        // 함수
+        function myFunc() {
+            count++;
+            document.write("hello " + count, "<br>");
+        }
+
+        myFunc();
+
+        // 함수를 변수로 참조하는 방식 : 익명함수
+        let theFunc = function() {
+            count++;
+            document.write("bye " + count, "<br>");
+        }
+
+        // 변수를 통한 함수호출
+        theFunc();
+    </script>
+</body>
+</html>

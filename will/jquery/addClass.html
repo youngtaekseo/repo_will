@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <!-- CDN(Content Delivery Network) 방식 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                // $("h1, h2, p").addClass("클래스선택자");
+                $("h1, h2, p").addClass("blue");
+                $("div").addClass("important");
+            });
+        });
+    </script>
+
+    <style>
+        .important {
+            font-weight: bold;
+            font-size: 30px;
+            color: red;
+        }
+
+        .blue {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h3>addClass() 메소드 사용</h3>
+
+    <h1>JavaScript</h1>
+    <h2>jQuery</h2>
+    <p>다음과정은 형상관리 수업입니다.</p>
+    <div>형상관리는 git을 사용합니다.</div>
+
+    <button type="button">스타일 적용</button>
+</body>
+</html>

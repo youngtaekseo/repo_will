@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내장객체 : Date</title>
+</head>
+<body>
+    <h3>내장객체 : Date</h3>
+    <p>두 날짜의 간격을 일수로 구하는 예제</p>
+
+    <script>
+        /*
+            new Date() // 오늘날짜와 시간
+            new Date(date string) 예) new Date("2023-12-01")
+            new Date(year,month)
+            new Date(year,month,day)
+            new Date(year,month,day,hours)
+            new Date(year,month,day,hours,minutes)
+            new Date(year,month,day,hours,minutes,seconds)
+            new Date(year,month,day,hours,minutes,seconds,ms)
+            new Date(milliseconds)      
+            
+            setDate()	        Set the day as a number (1-31)          예) let d = new Date(); d.setDate(15); 또는 d.setDate(d.getDate() + 50);
+            setFullYear()	    Set the year (optionally month and day) 예) let d = new Date(); d.setFullYear(2020); 또는 d.setFullYear(2020, 11, 3);
+            setHours()	        Set the hour (0-23)                     예) let d = new Date(); d.setHours(22);
+            setMilliseconds()	Set the milliseconds (0-999)            
+            setMinutes()	    Set the minutes (0-59)                  예) let d = new Date(); d.setMinutes(30);
+            setMonth()	        Set the month (0-11)                    예) let d = new Date(); d.setMonth(11);
+            setSeconds()	    Set the seconds (0-59)                  예) let d = new Date(); d.setSeconds(30);
+            setTime()	        Set the time (milliseconds since January 1, 1970)            
+        */
+        let today = new Date(); // 현재날짜 : 2023.12.29
+        let nowYear = today.getFullYear(); // 2023
+
+        let theDate = new Date(nowYear, 11, 10); // 2024.12.31
+
+        document.write("오늘날짜 : " + today, "<br>");
+        document.write("임의의 날짜 : " + theDate, "<br>");
+
+        // 1970.01.01 기준
+        let diffDate = theDate.getTime() - today.getTime(); // 밀리세컨드 단위로 저장
+        document.write("두 날짜 간격 : " + diffDate, "<br>");
+
+        // 1000 : 밀리세컨드는 초를 1000분1로 환산
+        // 60 : 1분은 60초
+        // 60 : 60분은 1시간
+        // 24 : 24시간은 1일
+        let result = Math.ceil(diffDate / (1000 * 60 * 60 * 24)); // Math.ceil() 소수점은 올림기능
+        document.write("<h1>오늘부터 올해 연말까지 남은 날짜</h1>");
+        document.write("D-Day : " + result + "일 남음");
+
+        result = Math.ceil(diffDate / (1000 * 60 * 60)); // Math.ceil() 소수점은 올림기능
+        document.write("<h1>오늘부터 올해 연말까지 남은 날짜</h1>");
+        document.write("D-Day : " + result + "시간 남음");    
+        
+        result = Math.ceil(diffDate / (1000 * 60)); // Math.ceil() 소수점은 올림기능
+        document.write("<h1>오늘부터 올해 연말까지 남은 날짜</h1>");
+        document.write("D-Day : " + result + "분 남음");          
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택문 : switch문</title>
+</head>
+<body>
+    <h3>선택문 : switch문</h3>
+
+    <script>
+        // prompt() 함수에서 취소를 클릭하면 null 값이 발행한다
+        let site = prompt("네이버, 다음, 네이트, 구글중 즐겨찾는 포털사이트 입력", "");
+
+        let url;
+
+        // break; 문을 생략하면 아래 case 구문이 동작한다
+        // break; 문을 사용하면 switch문을 탈출한다
+        switch(site) {
+            case "네이버": 
+                url = "www.naver.com";
+                break;
+            case "다음": 
+                url = "www.daum.net";
+                break;
+            case "네이트": 
+                url = "www.nate.com";
+                break;
+            case "구글": 
+                url = "www.google.com";
+                break;
+            default: 
+                alert("보기중에 없는 사이트입니다.");
+        }
+
+        if(url) {
+            // 주소이동 명령어, location.href = "이동주소";
+            location.href = "http://" + url;
+        }
+    </script>
+</body>
+</html>
