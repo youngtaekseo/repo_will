@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- CDN(Content Delivery Network) 방식 -->
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>    
+</head>
+<body>
+    <button type="button" onclick="fnEmailChk()">이메일 정규식 테스트</button>
+    <br>
+    <input id="eMail" name="eMail" type="text">
+    <p id="result" name="result"></p>    
+    <script>
+        let regExp1 = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
+        let regExp2 = /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/g;
+        let regExp3 = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
+
+        let eMail = document.querySelector("input[name=eMail]");
+
+        // 이메일 정규식
+        fnEmailChk = function() {
+            if(eMail.value == null || eMail.value == "") {
+                document.getElementById("result").innerHTML = "입력된 내용이 없습니다";
+            } else {
+                if(regExp2.test(eMail.value)) {
+                    document.getElementById("result").innerHTML = "이메일 형식이 맞습니다";
+                } else {
+                    document.getElementById("result").innerHTML = "이메일 형식이 아닙니다";
+                };
+            };
+
+        };
+    </script>
+
+</body>
+</html>
